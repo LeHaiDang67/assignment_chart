@@ -1,0 +1,41 @@
+.weather-status{
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .weather-icon {
+        img{
+            width: 80px;
+            position: relative;
+            right: 10px;
+        }
+    }
+    .weather-status-center{
+        color: white;
+        img{
+            width: 10px;
+        }
+        p{
+            margin: 5px;
+            font-size: 23px;
+            &:first-child{
+                color: white;
+                font-size: 40px;
+                
+            }
+        }
+
+    }
+    .humidity-percent{
+        top:200px;
+        color: white;
+        font-size: 23px;
+        margin-top: 59px;
+        img{
+            width: 16px;
+        }
+        
+    }
+}
+

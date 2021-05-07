@@ -1,0 +1,53 @@
+.weather-params{
+    display: flex;
+    margin-top: 37px;
+    color: white;
+    
+    .weather-params-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-right: 1px solid white;
+        padding-bottom: 10px;
+        &:last-child{
+            border-right: 0;
+        }
+        .weather-params-title{
+          font-weight: bolder;
+        }
+        .btn-number{
+            border: 1px solid  rgb(15, 199, 107);;
+            background: rgb(15, 199, 107);
+            border-radius: 10%;
+            width: 50px;
+            height: 38px;
+            font-size: 27px;
+        }
+        .btn-normal{
+            width: 50px;
+            height: 28px;
+            font-size: 27px;
+        }
+        .btn-cicle{
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgb(222, 229, 231);
+            border-radius: 100%;
+            background: rgba(147, 192, 202, 0.986);
+        }
+        .weather-params-blur{
+            opacity: 80%;
+        }
+    }
+    .last-child{
+        color: black;
+        font-size: 20px;
+        font-weight: bolder;
+        justify-content: space-around;
+        img{
+            width: 50px;
+        }
+    }
+}

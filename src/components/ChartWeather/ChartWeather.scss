@@ -1,0 +1,42 @@
+.chart-weather{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+    background-color: white;
+    scroll-behavior: smooth;
+    @media all and (max-width: 1024px) {
+       // margin-top: 100px;
+      }
+    #myCanvas{
+    }
+    .title-chart-weather{
+        font-size: 18px;
+        font-weight: bolder;
+        position: sticky;
+        z-index: 1;
+        top: calc(50vh - 20%);
+        left: 20px;
+        span{
+            margin-right: 5px;
+        }
+        // @media all and (max-width: 768px){
+        //     top: calc(100vh - 30%);
+        //     margin-top: 0;
+        // }
+        .text-light-blue{
+            color: rgb(126, 206, 233);
+        }
+        .text-orange{
+            color: rgb(216, 162, 38);
+        }
+        .text-dot{
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: #bbb;
+            display: inline-block;      
+        }
+    }
+}
