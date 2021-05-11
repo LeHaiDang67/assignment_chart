@@ -1,16 +1,19 @@
 .top-content {
-    background: #2a4fba;
-    background: linear-gradient(180deg,#2780e6 9%,#3f94e4 22%);
-    position: relative;
-    height: auto;
-    min-height: 100% !important;
-        
+   
+    height: 100% !important;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
     .container-top{
         height: 60%;
-
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: linear-gradient(180deg,#2780e6 9%,#3f94e4 22%);
     }
-    
     .container-chart{
         height: 40%;
+        overflow-y: hidden;
     }
+  
 }

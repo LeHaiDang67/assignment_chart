@@ -1,7 +1,7 @@
 .weather-status{
-    position: relative;
-    height: 200px;
+    height: 40%;
     display: flex;
+
     justify-content: center;
     align-items: center;
     .weather-icon {
@@ -28,7 +28,6 @@
 
     }
     .humidity-percent{
-        top:200px;
         color: white;
         font-size: 23px;
         margin-top: 59px;

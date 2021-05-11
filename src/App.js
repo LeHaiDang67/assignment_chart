@@ -10,7 +10,6 @@ function App() {
       <Route path='/' exact>
            <Home/>
       </Route>
-    
     </div>
   );
 }

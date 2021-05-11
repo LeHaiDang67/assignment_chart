@@ -1,8 +1,9 @@
 
-   
-    header {
-        height: 120px;
-        position: relative;
+header {
+        height: 35%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
         .toggle-bar  {
             position: absolute;
             top: 35px;
@@ -18,10 +19,6 @@
         }
 
         .block-location {
-            position: absolute;
-            top: 12px;
-            left: 0;
-            right: 0;
             margin: 0 auto;
             width: 160px;
             text-align: center;
@@ -49,7 +46,7 @@
         
         }
 
-    }
+}
 
 
 
