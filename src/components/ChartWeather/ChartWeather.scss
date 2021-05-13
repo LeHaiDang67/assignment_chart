@@ -1,31 +1,17 @@
 .chart-weather{
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     overflow-y: hidden;
     overflow-x: scroll;
- 
     img{
         position: relative;
         bottom: 100px;
     }
-    .canvas-container{
-       
-        #myCanvas{
-           
-            scroll-behavior: smooth;
-            padding: 0px;
-            @media all and (max-width: 768px){
-               
-             }
-        }
-      
-       
-    }
     .text-day{
         position: sticky;
-        left: 48%;
-        bottom: 190px;
+        left: 45%;
+        bottom: 210px;
         font-size: 18px;
         font-weight: bolder;
     }
@@ -38,10 +24,6 @@
         span{
             margin-right: 5px;
         }
-        // @media all and (max-width: 768px){
-        //     top: calc(100vh - 30%);
-        //     margin-top: 0;
-        // }
         .text-light-blue{
             color: rgb(126, 206, 233);
             position: absolute;
