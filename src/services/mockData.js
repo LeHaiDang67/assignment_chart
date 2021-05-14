@@ -103,7 +103,7 @@ const newDateWithTime = (date, addDay, hour, minute) => {
             },
           ],
         });
-      }, 1000);
+      }, 10);
     });
     return promise;
   };

@@ -4,16 +4,27 @@
     background-color: rgb(255, 255, 255);
     overflow-y: hidden;
     overflow-x: scroll;
+    height: 100%;
     img{
         position: relative;
         bottom: 100px;
     }
     .text-day{
+        display: inline-block;
         position: sticky;
-        left: 45%;
-        bottom: 210px;
+        left: 44%;
+        bottom: 64%;
         font-size: 18px;
         font-weight: bolder;
+    }
+    .text-line{
+        position: absolute;
+        left: 50%;
+        bottom: calc(100%-20px);
+        width: 0.5px;
+        height: 265px;    
+        background: rgba(0,0,0,.2); 
+        content: "";
     }
     .title-chart-weather{
         font-size: 18px;
@@ -46,6 +57,7 @@
             background-color: #bbb;
             display: inline-block;      
         }
+     
     }
 
     
