@@ -13,9 +13,10 @@ const Header = ()=>{
                 <div className='block-location'>
                     <p>myENV</p>
                     <span>Current Location</span>
+                    <img src="./../white-down-arrow.png"/>
                 </div>
                 <div className='block-icon'>
-                    <img src="./../bell.png"></img>
+                    <img src="./../bell.png"/>
                 </div>
             </header>
        </>

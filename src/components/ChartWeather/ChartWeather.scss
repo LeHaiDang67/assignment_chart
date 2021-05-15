@@ -5,6 +5,8 @@
     overflow-y: hidden;
     overflow-x: scroll;
     height: 100%;
+    width: 100%;
+
     img{
         position: relative;
         bottom: 100px;
@@ -12,19 +14,31 @@
     .text-day{
         display: inline-block;
         position: sticky;
-        left: 44%;
-        bottom: 64%;
+        left: 46%;
+        bottom: 68%;
         font-size: 18px;
         font-weight: bolder;
     }
-    .text-line{
-        position: absolute;
-        left: 50%;
-        bottom: calc(100%-20px);
-        width: 0.5px;
-        height: 265px;    
-        background: rgba(0,0,0,.2); 
-        content: "";
+    .text-line-container{
+     
+        .text-line{
+            position: absolute;
+            left: 50%;
+            top: 365px;
+            width: 1px;
+            height: 165px;    
+            background: rgba(0,0,0,.2); 
+            content: "";
+        }
+    }
+   
+    .text-time{
+        font-size: 17px;
+        display: inline-block;
+        position: sticky;
+        width: 80px;
+        left: 47%;
+        bottom: 50px;
     }
     .title-chart-weather{
         font-size: 18px;
@@ -32,6 +46,7 @@
         position: sticky;
         top: 820px;
         left: 20px;
+        width: 100%;
         span{
             margin-right: 5px;
         }
@@ -39,6 +54,7 @@
             color: rgb(126, 206, 233);
             position: absolute;
             bottom:280px;
+            left: 1px;
         }
         .text-orange{
             position: absolute;
@@ -57,7 +73,7 @@
             background-color: #bbb;
             display: inline-block;      
         }
-     
+      
     }
 
     
