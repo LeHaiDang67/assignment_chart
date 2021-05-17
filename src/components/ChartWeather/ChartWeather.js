@@ -39,10 +39,7 @@ const ChartWeather = () => {
 
   }
 
-  const chartBackground = useCallback(({ widthChart, ctx }) => {
-
-
-     
+  const chartBackground = useCallback(({ widthChart, ctx}) => {
     //water
     ctx.beginPath();
 
@@ -340,6 +337,11 @@ const ChartWeather = () => {
     ctx.font = "16px Times New Roman";
     ctx.fillText(formatTime(tideAndSunData.days[2].sunsetTime), 793 * widthChart / 144, canvasHeight + 10);
 
+    //the sun scroll
+   // ctx.beginPath();
+  //  ctx.drawImage(sunImage, 100 ,10);
+    
+
 
 
   }, [tideAndSunData, size]);
@@ -379,6 +381,15 @@ const ChartWeather = () => {
 
   }
 
+  const sunScroll = (xSun, ySun) =>{
+    const ctx = myRef.current.getContext('2d');
+    let sunImage = new Image();
+    sunImage.src = './../sun.png';
+    sunImage.onload = () =>{
+    ctx.drawImage(sunImage, xSun, ySun , 30, 30);
+    }
+  }
+
   const scrollWindow = () => {
     const widthWindow = window.innerWidth;
     let currentScroll = document.getElementById('chart-container').scrollLeft;
@@ -390,6 +401,7 @@ const ChartWeather = () => {
     if (currentScroll < (widthWindow + widthWindow / 2)) {
       let startTime = 6;
       formatTimeCurrent(currentHour, currentMinute, countTimeMinute, countTimeHour, startTime);
+    //  sunScroll(size/2 * currentScroll, canvasHeight-15)
       let currentMouth = tideAndSunData.days[0].sunriseTime.getMonth();
       setCurrentDate(`${tideAndSunData.days[0].sunriseTime.getDate()}th ${months[currentMouth]}`);
 
@@ -416,12 +428,12 @@ const ChartWeather = () => {
             let currentMouth = data.currentTime.getMonth();
             setTideAndSunData(data);
             setCurrentDate(`${data.currentTime.getDate(0)}th ${months[currentMouth]}`);
-            // console.log(tideAndSunData.days[2].sunriseTime.getDate());
 
           }
         );
     }
 
+    
 
     if (tideAndSunData !== 0) {
       resizeWindow();
@@ -430,11 +442,8 @@ const ChartWeather = () => {
       myRef.current.height = canvasHeight + 15;
       const ctx = myRef.current.getContext('2d');
       chartBackground({ widthChart: size, ctx });
-
+     
     }
-
-
-
 
     return () => window.removeEventListener('resize', resizeWindow);
 
@@ -449,8 +458,8 @@ const ChartWeather = () => {
         <span className='text-time'>{scrollBar}</span>
        
           <span className='text-line'></span>
-    
-
+          <span className ='triangle-up'/>
+      
         <div className='title-chart-weather'>
           <span className='text-light-blue'>Tide</span>
           <span className='text-dot'></span>
@@ -458,7 +467,7 @@ const ChartWeather = () => {
 
         </div>
 
-        <img ref={sunRef} src='./../sun.png' name='sun' width={45} height={45} />
+    
         <div className='text-day'>{currentDate}</div>
 
       </div>
